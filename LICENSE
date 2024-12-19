@@ -1,7 +1,234 @@
-Copyright (c) GitHub, Inc.
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Nite Wave - Vente d'Habits</title>
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #D6AEDD, #A974D6);
+            color: #FFFFFF;
+        }
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        header {
+            background-color: rgba(169, 116, 214, 0.9);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid #5e4b8b;
+        }
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        header p {
+            margin: 10px 0 0;
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(169, 116, 214, 0.8);
+        }
+
+        nav a {
+            color: white;
+            padding: 16px 30px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background-color: #9b59b6;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+            gap: 30px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 15px;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: translateY(-12px);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            margin-top: 20px;
+            color: #A974D6;
+        }
+
+        .product p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .product .price {
+            font-size: 22px;
+            color: #5e4b8b;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .product button {
+            background-color: #A974D6;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #9b59b6;
+        }
+
+        footer {
+            background-color: #5e4b8b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Page produit détaillée */
+        .product-detail {
+            padding: 50px;
+            text-align: center;
+            background-color: #f7f0f4;
+        }
+
+        .product-detail img {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>The Nite Wave</h1>
+    <p>Explorez nos vêtements stylés et tendance!</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#pantalon">Pantalon</a>
+    <a href="#pull">Pull</a>
+    <a href="#tshirt">T-shirt</a>
+</nav>
+
+<!-- Section Produits -->
+<div class="container">
+    <!-- Pantalon -->
+    <div class="product" id="pantalon">
+        <a href="#pantalon-detail">
+            <img src="https://via.placeholder.com/300x400.png?text=Pantalon" alt="Pantalon">
+            <h2>Pantalon Chic</h2>
+        </a>
+        <p>Un pantalon élégant et moderne, idéal pour toute occasion.</p>
+        <p class="price">€89.99</p>
+        <button>Acheter</button>
+    </div>
+
+    <!-- Pull -->
+    <div class="product" id="pull">
+        <a href="#pull-detail">
+            <img src="https://via.placeholder.com/300x400.png?text=Pull" alt="Pull">
+            <h2>Pull Douillet</h2>
+        </a>
+        <p>Le pull parfait pour l'hiver, doux et confortable.</p>
+        <p class="price">€79.99</p>
+        <button>Acheter</button>
+    </div>
+
+    <!-- T-shirt -->
+    <div class="product" id="tshirt">
+        <a href="#tshirt-detail">
+            <img src="https://via.placeholder.com/300x400.png?text=T-shirt" alt="T-shirt">
+            <h2>T-shirt Stylé</h2>
+        </a>
+        <p>Un T-shirt tendance pour un look décontracté et élégant.</p>
+        <p class="price">€59.99</p>
+        <button>Acheter</button>
+    </div>
+</div>
+
+<!-- Page produit détaillée : Pantalon -->
+<div class="product-detail" id="pantalon-detail">
+    <img src="https://via.placeholder.com/500x600.png?text=Pantalon" alt="Pantalon">
+    <h2>Pantalon Chic</h2>
+    <p>Un pantalon élégant et moderne, idéal pour toute occasion. Taille disponible : S, M, L, XL. 100% coton de haute qualité.</p>
+    <p class="price">€89.99</p>
+    <button>Acheter</button>
+</div>
+
+<!-- Page produit détaillée : Pull -->
+<div class="product-detail" id="pull-detail">
+    <img src="https://via.placeholder.com/500x600.png?text=Pull" alt="Pull">
+    <h2>Pull Douillet</h2>
+    <p>Le pull parfait pour l'hiver. Composé de laine douce et chaude, il vous tiendra confortablement au chaud pendant les mois froids.</p>
+    <p class="price">€79.99</p>
+    <button>Acheter</button>
+</div>
+
+<!-- Page produit détaillée : T-shirt -->
+<div class="product-detail" id="tshirt-detail">
+    <img src="https://via.placeholder.com/500x600.png?text=T-shirt" alt="T-shirt">
+    <h2>T-shirt Stylé</h2>
+    <p>Un T-shirt tendance pour un look décontracté et élégant. Disponible en plusieurs couleurs et tailles.</p>
+    <p class="price">€59.99</p>
+    <button>Acheter</button>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 The Nite Wave - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
